@@ -1,0 +1,27 @@
+﻿@model List<StudentRegistration.Models.Course>
+
+@{
+}
+<h1>Courses</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>CourseName</th>
+            <th>CourseCode</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <th>@course.Id</th>
+                <th>@course.CourseName</th>
+                <th>@course.CourseCode</th>
+                <th><a href="Course/View/{@course.Id}">View</a></th>
+            </tr>
+        }
+    </tbody>
+</table>

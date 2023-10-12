@@ -1,0 +1,24 @@
+﻿@model StudentRegistration.Models.UpdateCourseViewModel
+
+@{
+}
+<h1>Edit Course Details</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">CourseName</label>
+        <input type="text" class="form-control" asp-for="CourseName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">CourseCode</label>
+        <input type="text" class="form-control" asp-for="CourseCode">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete" asp-controller="Course">
+        Delete
+    </button>
+</form>

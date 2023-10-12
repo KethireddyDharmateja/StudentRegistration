@@ -1,0 +1,23 @@
+﻿@model List<StudentRegistration.Models.StudentCourse>
+
+@{
+}
+<h1>Student Course</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Course Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var studentCourse in Model)
+        {
+            <tr>
+                <th>@studentCourse.StudentName</th>
+                <th>@studentCourse.CourseName</th>
+            </tr>
+        }
+    </tbody>
+</table>

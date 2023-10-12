@@ -1,0 +1,22 @@
+﻿@model StudentRegistration.Models.UpdateStudentViewModel
+
+@{
+}
+<h1>Edit Student Details</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Marks</label>
+        <input type="number" class="form-control" asp-for="Marks">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger"
+    asp-action="Delete" asp-controller="Students">Delete</button>
+</form>
